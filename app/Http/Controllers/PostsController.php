@@ -142,9 +142,9 @@ class PostsController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            //'cover_image' => 'image|nullable|max:1999',
         ]);
-
+        //return $request->input('cover_image');
         if($request->hasFile('cover_image')){
             $fullfilename = $request->file('cover_image')->getClientOriginalName();
             $filename = pathinfo($fullfilename, PATHINFO_FILENAME);
@@ -154,6 +154,8 @@ class PostsController extends Controller
         }else{
             $storefilename = 'noimage.jpg';
         }
+
+
 
         $post = Post::find($id);
         $post->title = $request->input('title');
@@ -184,11 +186,15 @@ class PostsController extends Controller
         if(auth()->user()->id !== $post->user_id){
             return redirect('/posts')->with('error', 'Unauthorized accsess');
         }
+
+        //rodom ka turim
+        //$files = Storage::allFiles("/");
+        //return $files;
+
         //trinam foto ir video
-        $s = "cover_image/".$post->cover_image;
-        $v = "video/".$post->source;
-        Storage::delete($s);
-        Storage::delete($v);
+        $s = "public/cover_images/".$post->cover_image;
+        $v = "public/video/".$post->source;
+        Storage::delete([$s, $v]);
 
         $post->delete();
 

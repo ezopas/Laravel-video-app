@@ -2,9 +2,8 @@
 
 @section('content')
     <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
-    <a href="/posts" class="btn btn-default">Go Back</a>
-    <br>
     @if(!Auth::guest())
+        <a href="/posts" class="btn btn-default">Go Back</a>
         @if(Auth::user()->id == $post->user_id)
             <a href="/posts/{{$post->id}}/edit" class="btn btn-primary pull-right">Edit</a>
         @endif
@@ -37,7 +36,7 @@
                         <div class="modal-body">
 
                             <strong>Embed</strong>
-                            <textarea class="form-control">&#x3C;iframe width=&#x22;560&#x22; height=&#x22;315&#x22; src=&#x22;http://videoapp.dev/embed/{{$post->id}}&#x22; frameborder=&#x22;0&#x22; allow=&#x22;encrypted-media&#x22; allowfullscreen&#x3E;&#x3C;/iframe&#x3E;</textarea>
+                            <textarea class="form-control">&#x3C;iframe width=&#x22;560&#x22; height=&#x22;315&#x22; src=&#x22;{{ config('app.url') }}/embed/{{$post->id}}&#x22; frameborder=&#x22;0&#x22; allow=&#x22;encrypted-media&#x22; allowfullscreen&#x3E;&#x3C;/iframe&#x3E;</textarea>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

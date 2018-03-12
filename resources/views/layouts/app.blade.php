@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
     @include('inc.navbar')
@@ -20,6 +22,7 @@
     <br>
     <br>
     <br>
+
     <div class="container">
         @include('inc.notification')
         @yield('content')
@@ -30,6 +33,6 @@
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
     </script>
-    <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

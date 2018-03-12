@@ -5,7 +5,7 @@
     {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST'])!!}
     <div class="form-group">
         <label>Video title</label>
-        {{Form::text('title', $post->title, ['class' => 'form-controll', 'placeholder' => 'Enter video title'])}}
+        {{Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'Enter video title'])}}
     </div>
     <div class="form-group">
         <label>Description</label>
@@ -18,7 +18,7 @@
     {{--</div>--}}
     <div class="form-group">
         <label>Upload image</label>
-        {{Form::file('cover_image', ['accept' => 'image/*'])}}
+        {{Form::file('cover_image', ['accept' => 'image/*', 'required' => 'required'])}}
     </div>
     <div class="form-group">
         <label>Upload video:</label>
