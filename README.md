@@ -1,4 +1,4 @@
-# videoapp
+# Laravel video app
 Laravel video web app from scrach
 
 I created an own video app like youtube from scrach.
@@ -11,16 +11,16 @@ I created an own video app like youtube from scrach.
 - Responsive design for mobile.
 
 Home page:
-![Home page]([https://i.imgur.com/U2RJ8Nl.png)
+![Home page](https://i.imgur.com/l0QcUBH.png)
 Video page:
-![Home page]([https://i.imgur.com/k5qL17X.png)
+![Video page](https://i.imgur.com/k5qL17X.png)
 Dasboard:
-![Home page]([https://i.imgur.com/5jzOf2Q.png)
+![Dasboard](https://i.imgur.com/5jzOf2Q.png)
 Video upload page:
-![Home page]([https://i.imgur.com/dXiwxDW.png)
+![Video upload page](https://i.imgur.com/dXiwxDW.png)
 Edit video post:
-![Home page]([https://i.imgur.com/9C9H9K0.png)
+![Edit video post](https://i.imgur.com/9C9H9K0.png)
 Video embed:
-![Home page]([https://i.imgur.com/eVV9vME.png)
+![Video embed](https://i.imgur.com/eVV9vME.png)
 Video list:
-![Home page]([https://i.imgur.com/l0QcUBH.png)
+![Video list](https://i.imgur.com/l0QcUBH.png)
